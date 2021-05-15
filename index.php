@@ -20,7 +20,7 @@
                 <h4><?php
                      $sql = "SELECT * FROM mytodos";
                             $result = mysqli_query($db,$sql);
-                            $todos = mysqli_fetch_all($result);
+                            $mytodos = mysqli_fetch_all($result);
                             $total = count($mytodos);
                             $complete = 0;
                             //mysqli_bind_param()

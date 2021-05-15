@@ -24,7 +24,7 @@
                 }
                 break;
 
-            case'delete';
+            case'delete':
 
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
@@ -40,7 +40,7 @@
                 }
                 break;
 
-            case'complete';
+            case'complete':
 
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
@@ -56,7 +56,7 @@
                 }
                 break;
 
-             case'pending';
+             case'pending':
 
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
@@ -71,12 +71,12 @@
                         header('Location: index.php?success= mytodos is pending');
                 }
                 break;
-             case'edited';
+             case'edited':
                  if(empty($_POST['id'])){
                     header('Location: index.php?error=Select at least one todo');
                 }
 
-                $sql = "UPDATE mytodos SET 'title' = '".$_POST['title']."' WHERE id = ('".$_POST['id']."';
+                $sql = "UPDATE mytodos SET 'title' = '" . $_POST['title'] . "' WHERE id =" .  $_POST['id'];
 
                 $result = mysqli_query($db, $sql);
                 
@@ -87,10 +87,10 @@
                 break;
 
 
-            case'edit';
+            case'edit':
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
-                }
+                } else {
                     header('Location: edit-todo.php?id='.$_POST['todo']);
                 }
                 break;
