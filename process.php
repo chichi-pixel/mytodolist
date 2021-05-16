@@ -14,13 +14,13 @@
                     header('Location: add-todolist.html');
                 }
 
-                $sql = "INSERT INTO mytodos ('title') VALUES ('".$_POST['title']."')";
-
+                $sql = "INSERT INTO mytodos (title, status) VALUES ('".$_POST['title']."', 0)";
+                
                 $result = mysqli_query($db, $sql);
                 
                 if($result !== false){
                     
-                        header('Location: index.php?success=New mytodos added');
+                    header('Location: index.php?success=New mytodos added');
                 }
                 break;
 
@@ -46,8 +46,8 @@
                     header('Location: index.php?error=Select at least one mytodos');
                 }
 
-                $sql = "UPDATE mytodos SET 'status' = 1 ('".$_POST['todo']."')";
-
+                $sql = "UPDATE mytodos SET status = 1 WHERE id = "  . $_POST['todo'];
+                
                 $result = mysqli_query($db, $sql);
                 
                 if($result !== false){
@@ -62,8 +62,8 @@
                     header('Location: index.php?error=Select at least one mytodos');
                 }
 
-                $sql = "UPDATE mytodos SET 'status' = 0 ('".$_POST['todo']."')";
-
+                $sql = "UPDATE mytodos SET status = 0 WHERE id = "  . $_POST['todo'];
+                
                 $result = mysqli_query($db, $sql);
                 
                 if($result !== false){
@@ -76,8 +76,8 @@
                     header('Location: index.php?error=Select at least one todo');
                 }
 
-                $sql = "UPDATE mytodos SET 'title' = '" . $_POST['title'] . "' WHERE id =" .  $_POST['id'];
-
+                $sql = "UPDATE mytodos SET  title = '" . $_POST['title'] . "' WHERE id =" .  $_POST['id'];
+                
                 $result = mysqli_query($db, $sql);
                 
                 if($result !== false){
@@ -91,7 +91,7 @@
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
                 } else {
-                    header('Location: edit-todo.php?id='.$_POST['todo']);
+                    header('Location: edit-todolist.php?id='.$_POST['todo']);
                 }
                 break;
 

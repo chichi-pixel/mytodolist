@@ -34,7 +34,7 @@
                     ?>
                 </h4>
                 <div class="btn-holder">
-                    <a href="add-todo.html" class="btn btn-primary"><i class="fa fa-plus"></i> Add New Todo</a>
+                    <a href="add-todolist.html" class="btn btn-primary"><i class="fa fa-plus"></i> Add New Todo</a>
                     <button name="action" value="edit" class="btn btn-secondary"><i class="fa fa-edit"></i> Edit To-Do List</button>
                     <button name="action" value="delete" class="btn btn-danger"><i class="fa fa-times"></i> Delete To-Do List</button>
                     <button name="action" value="complete" class="btn btn-purple"><i class="fa fa-thumbs-up"></i> Mark Complete</button>

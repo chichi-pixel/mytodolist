@@ -31,7 +31,7 @@
                 <input type="hidden" name="action" value="edited">
                 <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
                 <button class="btn btn-primary"><i class="fa fa-save"></i>Save</button>
-                <a href="index.html" class="btn btn-success"><i class="fa fa-arrow-left"></i>Back</a>
+                <a href="index.php" class="btn btn-success"><i class="fa fa-arrow-left"></i>Back</a>
             </div>
         </form>
     </div>
