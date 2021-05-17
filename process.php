@@ -61,7 +61,7 @@
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
                 }
-                $id = mysqli_real_escape_string($db, $_POST['todo'])
+                $id = mysqli_real_escape_string($db, $_POST['todo']);
                 $sql = "UPDATE mytodos SET status = 0 WHERE id = "  . $id;
                 
                 $result = mysqli_query($db, $sql);
@@ -75,8 +75,9 @@
                  if(empty($_POST['id'])){
                     header('Location: index.php?error=Select at least one todo');
                 }
-                $id = mysqli_real_escape_string($db, $_POST['todo']);
-                $sql = "UPDATE mytodos SET  title = '" . $_POST['title'] . "' WHERE id = " .  $id;
+                $id = mysqli_real_escape_string($db, $_POST['id']);
+                $title = mysqli_real_escape_string($db, $_POST['title']);
+                $sql = "UPDATE mytodos SET  title = '" . $title . "' WHERE id = " .  $id;
                 
                 $result = mysqli_query($db, $sql);
                 
