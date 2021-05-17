@@ -13,8 +13,8 @@
                 if(empty($_POST['title'])){
                     header('Location: add-todolist.html');
                 }
-
-                $sql = "INSERT INTO mytodos (title, status) VALUES ('".$_POST['title']."', 0)";
+                $title = mysqli_real_escape_string($db, $_POST['title']);
+                $sql = "INSERT INTO mytodos (title, status) VALUES ('".$title."', 0)";
                 
                 $result = mysqli_query($db, $sql);
                 
@@ -29,8 +29,8 @@
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
                 }
-
-                $sql = "DELETE FROM mytodos WHERE id = ('".$_POST['todo']."')";
+                $id = mysqli_real_escape_string($db, $_POST['todo']);
+                $sql = "DELETE FROM mytodos WHERE id = ('".$id."')";
 
                 $result = mysqli_query($db, $sql);
                 
@@ -45,8 +45,8 @@
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
                 }
-
-                $sql = "UPDATE mytodos SET status = 1 WHERE id = "  . $_POST['todo'];
+                $id = mysqli_real_escape_string($db, $_POST['todo']);
+                $sql = "UPDATE mytodos SET status = 1 WHERE id = "  . $id;
                 
                 $result = mysqli_query($db, $sql);
                 
@@ -61,8 +61,8 @@
                  if(empty($_POST['todo'])){
                     header('Location: index.php?error=Select at least one mytodos');
                 }
-
-                $sql = "UPDATE mytodos SET status = 0 WHERE id = "  . $_POST['todo'];
+                $id = mysqli_real_escape_string($db, $_POST['todo'])
+                $sql = "UPDATE mytodos SET status = 0 WHERE id = "  . $id;
                 
                 $result = mysqli_query($db, $sql);
                 
@@ -75,8 +75,8 @@
                  if(empty($_POST['id'])){
                     header('Location: index.php?error=Select at least one todo');
                 }
-
-                $sql = "UPDATE mytodos SET  title = '" . $_POST['title'] . "' WHERE id =" .  $_POST['id'];
+                $id = mysqli_real_escape_string($db, $_POST['todo']);
+                $sql = "UPDATE mytodos SET  title = '" . $_POST['title'] . "' WHERE id = " .  $id;
                 
                 $result = mysqli_query($db, $sql);
                 
