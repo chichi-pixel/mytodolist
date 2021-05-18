@@ -1,4 +1,6 @@
+
 <?php
+/* mit der Datenbankverbindung bearbeiten*/
 
 if(empty($_SESSION)) {
     session_start();

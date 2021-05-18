@@ -1,4 +1,6 @@
+
 <?php
+/*Konfiguration für die Datenverbindung*/
 
    include_once('config.php');
    include_once('database.php'); 
@@ -9,7 +11,7 @@
         switch($_POST['action']){
             case 'add':
 
-
+            /*CRUD Operationen (Create, Read, Update, Delete) sind  in der PHP benutzt werden*/
                 if(empty($_POST['title'])){
                     header('Location: add-todolist.html');
                 }

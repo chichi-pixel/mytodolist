@@ -1,3 +1,6 @@
+
+/* Ihre Aufgaben werden in der Mysql PHP Admin - XAMMP(Apache) definieren (hinzufügen)*/
+
 CREATE TABLE IF NOT EXISTS `mytodos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(250) DEFAULT NULL,

@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To-Do List</title>
+    <title>Mein To-Do List</title>
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <!--Addieren Sie neue Aufgaben!-->
     <div class="container">
         <form action="process.php" method="POST">
             <div class="todo-table">
-                <h1>Add New To-Do List</h1>
+                <h1>Addieren  neue To-Do List</h1>
                 <div class="form-elements">
-                    <input type="text" name="title" required placeholder="Write mytodos here &hearts">
+                    <input type="text" name="title" required placeholder="Schreiben Sie Ihre todos hier! &hearts;">
                 </div>
                 <input type="hidden" name="action" value="add">
                 <button class="btn btn-primary"><i class="fa fa-save"></i>Save</button>
