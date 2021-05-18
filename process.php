@@ -12,6 +12,7 @@
             case 'add':
 
             /*CRUD Operationen (Create, Read, Update, Delete) sind  in der PHP benutzt werden*/
+            /*unterschützen das Projekt gegen SQL Injection (in CRUD Befehlen) sind auch programmiert worden.*/
                 if(empty($_POST['title'])){
                     header('Location: add-todolist.html');
                 }
